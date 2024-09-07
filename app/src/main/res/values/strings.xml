@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="hello_welcome_to_the_app">Hello, Welcome to the App!</string>
+    <string name="sample_image">Sample Image</string>
+    <string name="click_me">Click Me</string>
+    <string name="counter_0">Counter: 0</string>
+    <string name="increase_counter">Increase Counter</string>
+</resources>
