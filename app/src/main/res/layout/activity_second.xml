@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8F5F5"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback Form"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Radio Button Group (Feedback Type) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How would you rate our service?"
+        android:textColor="#444444"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_poor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poor"
+            android:textColor="#FF5722"
+            android:layout_marginEnd="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average"
+            android:textColor="#FFC107"
+            android:layout_marginEnd="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_excellent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excellent"
+            android:textColor="#4CAF50" />
+    </RadioGroup>
+
+    <!-- Seek Bar (Satisfaction Level) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Satisfaction Level"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar_satisfaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="5"
+        android:layout_marginBottom="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Would you like to provide additional comments?"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginBottom="10dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textColor="#333333" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback"
+        android:backgroundTint="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp"
+        android:onClick="showDialog" />
+
+</LinearLayout>

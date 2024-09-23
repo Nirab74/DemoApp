@@ -30,6 +30,14 @@
         android:id="@+id/myButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/increase_counter" />
+        android:text="@string/increase_counter"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/openSecondActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feedback" />
+
 
 </LinearLayout>
