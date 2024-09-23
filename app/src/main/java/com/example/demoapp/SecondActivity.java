@@ -1,57 +1,72 @@
 package com.example.demoapp;
-
-import android.app.AlertDialog;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private RadioGroup radioGroup;
-    private SeekBar seekBar;
-    private CheckBox checkBox;
+    // Declare variables for the UI components
+    private RatingBar ratingBar;
+    private SeekBar seekBarSatisfaction;
+    private CheckBox checkFeature1, checkFeature2;
+    private Switch switchRecommend;
+    private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        radioGroup = findViewById(R.id.radioGroup);
-        seekBar = findViewById(R.id.seekBar_satisfaction);
-        checkBox = findViewById(R.id.checkBox_comments);
 
-        Button submitButton = findViewById(R.id.btn_submit);
-        submitButton.setOnClickListener(v -> showDialog());
-    }
-
-    public void showDialog() {
-        // Get selected RadioButton text
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        RadioButton radioButton = findViewById(selectedId);
-        String feedbackType = radioButton != null ? radioButton.getText().toString() : "No Feedback";
+        ratingBar = findViewById(R.id.ratingBar);
+        seekBarSatisfaction = findViewById(R.id.seekBarSatisfaction);
+        checkFeature1 = findViewById(R.id.checkFeature1);
+        checkFeature2 = findViewById(R.id.checkFeature2);
+        switchRecommend = findViewById(R.id.switchRecommend);
+        submitButton = findViewById(R.id.submitButton);
 
 
-        int satisfactionLevel = seekBar.getProgress();
+        submitButton.setOnClickListener(v -> {
+
+            float rating = ratingBar.getRating();
+            int satisfactionLevel = seekBarSatisfaction.getProgress();
+            boolean isServiceEnjoyed = checkFeature1.isChecked();
+            boolean wantMoreFeatures = checkFeature2.isChecked();
+            boolean wouldRecommend = switchRecommend.isChecked();
 
 
-        boolean additionalComments = checkBox.isChecked();
+            String feedbackMessage = "Rating: " + rating + "\n" +
+                    "Satisfaction Level: " + satisfactionLevel + "/100\n" +
+                    "Enjoyed Service: " + (isServiceEnjoyed ? "Yes" : "No") + "\n" +
+                    "Want More Features: " + (wantMoreFeatures ? "Yes" : "No") + "\n" +
+                    "Would Recommend: " + (wouldRecommend ? "Yes" : "No");
 
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirm Feedback");
-        builder.setMessage("Feedback: " + feedbackType + "\nSatisfaction Level: " + satisfactionLevel +
-                "\nAdditional Comments: " + (additionalComments ? "Yes" : "No"));
-        builder.setPositiveButton("Submit", (dialog, which) -> {
-
-            Toast.makeText(SecondActivity.this, "Feedback submitted!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SecondActivity.this, feedbackMessage, Toast.LENGTH_LONG).show();
         });
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+
+
+        seekBarSatisfaction.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 }
