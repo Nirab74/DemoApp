@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
-    // Declare variables for the UI components
     private RatingBar ratingBar;
     private SeekBar seekBarSatisfaction;
     private CheckBox checkFeature1, checkFeature2;

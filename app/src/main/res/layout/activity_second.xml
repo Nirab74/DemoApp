@@ -50,7 +50,6 @@
         android:layout_marginBottom="24dp"
         android:progressTint="#FF5722"/>
 
-
     <CheckBox
         android:id="@+id/checkFeature1"
         android:layout_width="wrap_content"
@@ -84,6 +83,7 @@
         android:minWidth="48dp"
         android:padding="12dp"
      />
+
 
 
     <Button

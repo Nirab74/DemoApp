@@ -7,5 +7,13 @@
     <string name="increase_counter">Increase Counter</string>
     <string name="user_preferences">User Preferences</string>
     <string name="open_second_activity">Open Second Activity</string>
-    <string name="feedback">feedBack</string>
+    <string name="feedback">FeedBack</string>
+    <string name="information_form">Information Form</string>
+    <string name="full_name">Full Name</string>
+    <string name="student_id">Student ID</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="information_form1">Information Form</string>
 </resources>

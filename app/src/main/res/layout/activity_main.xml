@@ -37,7 +37,16 @@
         android:id="@+id/openSecondActivityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/feedback" />
+        android:text="@string/feedback"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/openFormActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/information_form"
+       />
+
 
 
 </LinearLayout>
