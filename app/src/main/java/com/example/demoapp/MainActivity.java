@@ -13,9 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView myTextView;
     private ImageView myImageView;
-    private Button myButton;
-    private Button openSecondActivityButton;
-    private Button openFormActivityButton;
     private int counter = 0;
 
     @Override
@@ -23,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         myTextView = findViewById(R.id.myTextView);
         myImageView = findViewById(R.id.myImageView);
-        myButton = findViewById(R.id.myButton);
-        openSecondActivityButton = findViewById(R.id.openSecondActivityButton);
-        openFormActivityButton = findViewById(R.id.openFormActivityButton);
+        Button myButton = findViewById(R.id.myButton);
+        Button openSecondActivityButton = findViewById(R.id.openSecondActivityButton);
+        Button openFormActivityButton = findViewById(R.id.openFormActivityButton);
+        Button openListViewActivity = findViewById(R.id.openListViewActivity);
 
 
         myButton.setOnClickListener(v -> {
@@ -36,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             myTextView.setText("Counter: " + counter);
             Toast.makeText(MainActivity.this, "Counter: " + counter, Toast.LENGTH_SHORT).show();
 
+            // Set different images for even and odd counters
             if (counter % 2 == 0) {
                 myImageView.setImageResource(R.drawable.even);
             } else {
@@ -43,13 +41,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         openSecondActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
         });
+
+
         openFormActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FormActivity.class);
+            startActivity(intent);
+        });
+
+
+        openListViewActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
             startActivity(intent);
         });
     }

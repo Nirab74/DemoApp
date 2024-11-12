@@ -15,7 +15,6 @@ public class SecondActivity extends AppCompatActivity {
     private SeekBar seekBarSatisfaction;
     private CheckBox checkFeature1, checkFeature2;
     private Switch switchRecommend;
-    private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         checkFeature1 = findViewById(R.id.checkFeature1);
         checkFeature2 = findViewById(R.id.checkFeature2);
         switchRecommend = findViewById(R.id.switchRecommend);
-        submitButton = findViewById(R.id.submitButton);
+        Button submitButton = findViewById(R.id.submitButton);
 
 
         submitButton.setOnClickListener(v -> {

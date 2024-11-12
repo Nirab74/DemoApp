@@ -19,7 +19,6 @@ public class FormActivity extends AppCompatActivity {
     private EditText nameEditText, idEditText, emailEditText, numEditText;
     private TextInputEditText passwordEditText;
     private Spinner spinner;
-    private Button submitButton;
     private LinearLayout outputLayout;
     private TextView outputText;
 
@@ -34,7 +33,7 @@ public class FormActivity extends AppCompatActivity {
         numEditText = findViewById(R.id.num);
         passwordEditText = findViewById(R.id.pass);
         spinner = findViewById(R.id.spinner);
-        submitButton = findViewById(R.id.submit);
+        Button submitButton = findViewById(R.id.submit);
         outputLayout = findViewById(R.id.outputLayout);
         outputText = findViewById(R.id.outputText);
 
