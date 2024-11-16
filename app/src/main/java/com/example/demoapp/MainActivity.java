@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             myTextView.setText("Counter: " + counter);
             Toast.makeText(MainActivity.this, "Counter: " + counter, Toast.LENGTH_SHORT).show();
 
-            // Set different images for even and odd counters
+
             if (counter % 2 == 0) {
                 myImageView.setImageResource(R.drawable.even);
             } else {

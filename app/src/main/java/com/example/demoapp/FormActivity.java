@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Objects;
+
 public class FormActivity extends AppCompatActivity {
 
     private EditText nameEditText, idEditText, emailEditText, numEditText;
@@ -51,7 +53,7 @@ public class FormActivity extends AppCompatActivity {
         String studentId = idEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String mobileNumber = numEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString().trim();
         String selectedCourse = spinner.getSelectedItem().toString();
 
 

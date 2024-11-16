@@ -1,0 +1,9 @@
+
+<resources>
+    <string name="app_name">LabTest</string>
+    <string-array name="divisions_array">
+        <item>Item 1</item>
+        <item>Item 2</item>
+    </string-array>
+
+</resources>

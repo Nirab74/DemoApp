@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/home">
 
     <TextView
         android:id="@+id/myTextView"
@@ -27,30 +28,34 @@
 
     <Button
         android:id="@+id/myButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/increase_counter"
+        android:backgroundTint="#0C1A70"
         android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/openSecondActivityButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#0C1A70"
         android:text="@string/feedback"
         android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/openFormActivityButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#0C1A70"
         android:text="@string/information_form"
         android:layout_marginBottom="10dp"
        />
     <Button
         android:id="@+id/openListViewActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List"
+        android:backgroundTint="#0C1A70"
+        android:text="Item List"
         />
 
 

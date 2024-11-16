@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="20dp"
-    android:background="@color/light_background"
+    android:background="@drawable/restback"
     tools:context=".FormActivity">
 
 
