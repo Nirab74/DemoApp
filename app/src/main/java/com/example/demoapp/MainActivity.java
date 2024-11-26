@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button openSecondActivityButton = findViewById(R.id.openSecondActivityButton);
         Button openFormActivityButton = findViewById(R.id.openFormActivityButton);
         Button openListViewActivity = findViewById(R.id.openListViewActivity);
+        Button openRecyclerViewActivity = findViewById(R.id.openRecyclerViewActivity);
 
 
         myButton.setOnClickListener(v -> {
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
         openListViewActivity.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+            startActivity(intent);
+        });
+
+        openRecyclerViewActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
             startActivity(intent);
         });
     }

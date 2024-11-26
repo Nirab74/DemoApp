@@ -14,7 +14,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> titles;
-    private HashMap<String, String> descriptions; // Child descriptions
+    private HashMap<String, String> descriptions;
 
     public CustomExpandableListAdapter(Context context, List<String> titles, HashMap<String, String> descriptions) {
         this.context = context;
@@ -29,7 +29,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return 1; // Each group has a single description
+        return 1;
     }
 
     @Override

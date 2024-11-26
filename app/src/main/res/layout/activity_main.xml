@@ -56,6 +56,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#0C1A70"
         android:text="Item List"
+        android:layout_marginBottom="10dp"
+        />
+    <Button
+        android:id="@+id/openRecyclerViewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0C1A70"
+        android:text="RecyclerView"
         />
 
 
